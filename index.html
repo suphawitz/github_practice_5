@@ -5,6 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Layer & Less | Home</title>
   <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Kanit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#c8395b',
+                            gold: '#c5b38d',
+                            bg: '#fbf9f6',
+                            dark: '#3e312c'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Kanit -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
 
@@ -23,33 +48,145 @@
 
   <main>
     <!-- TODO: Hero Section -->
-    <section class="section">
-      <div class="container">
-        <p class="todo-label">TODO: Hero Section</p>
-      </div>
+    <section class="relative w-full h-[600px] md:h-[700px]">
+        <!-- Background Image (Unsplash) -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Strawberry Cake Background" class="w-full h-full object-cover" />
+            <!-- Gradient Overlay for readability -->
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 container mx-auto px-6 h-full flex flex-col justify-center pb-20">
+            <div class="max-w-xl">
+                <h1 class="text-5xl md:text-6xl font-bold text-white leading-tight mb-4">
+                    เค้กที่ทำจาก <span class="text-yellow-400">💛</span>
+                </h1>
+                <p class="text-gray-200 text-lg mb-8 leading-relaxed">
+                    คัดโฮมเมดทุกชิ้น คัดสรรวัตถุดิบพรีเมียม<br>อบสดใหม่ทุกวันด้วยสูตรเฉพาะจากเชฟผู้เชี่ยวชาญ
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="bg-brand-red text-white px-8 py-3 rounded-full font-medium hover:bg-rose-700 transition flex items-center gap-2 shadow-lg shadow-brand-red/30">
+                        ดูเมนู <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                    <a href="#" class="bg-brand-gold text-white px-8 py-3 rounded-full font-medium hover:bg-yellow-600 transition shadow-lg">
+                        ติดต่อเรา
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- TODO: Best Sellers -->
-    <section class="section section-alt">
-      <div class="container">
-        <p class="todo-label">TODO: Best Sellers</p>
-      </div>
+    <section class="container mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <p class="text-brand-red font-medium text-sm flex items-center justify-center gap-2 mb-2">
+                <span>✦</span> Our Best Sellers <span>✦</span>
+            </p>
+            <h2 class="text-3xl font-bold text-gray-900">เค้กยอดนิยม</h2>
+        </div>
+
+        <!-- Cake Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-[32px] overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chocolate Cake" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-brand-red text-white text-xs px-3 py-1 rounded-full">Best Seller</span>
+                    <span class="absolute top-4 right-4 bg-white/90 text-brand-red font-semibold text-xs px-3 py-1 rounded-full">฿590</span>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">ช็อกโกแลตทรัฟเฟิล</h3>
+                    <div class="flex justify-center gap-1 text-yellow-400 text-sm">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-[32px] overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Strawberry Cake" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-brand-red text-white text-xs px-3 py-1 rounded-full">Popular</span>
+                    <span class="absolute top-4 right-4 bg-white/90 text-brand-red font-semibold text-xs px-3 py-1 rounded-full">฿490</span>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">สตรอว์เบอร์รีชอร์ตเค้ก</h3>
+                    <div class="flex justify-center gap-1 text-yellow-400 text-sm">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-[32px] overflow-hidden shadow-sm hover:shadow-md transition">
+                <div class="relative h-64">
+                    <img src="https://images.unsplash.com/photo-1519869325930-281384150729?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Matcha Cake" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-brand-red text-white text-xs px-3 py-1 rounded-full">New</span>
+                    <span class="absolute top-4 right-4 bg-white/90 text-brand-red font-semibold text-xs px-3 py-1 rounded-full">฿520</span>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">มัทฉะเลเยอร์เค้ก</h3>
+                    <div class="flex justify-center gap-1 text-yellow-400 text-sm">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="#" class="inline-flex items-center gap-2 border border-brand-red text-brand-red px-6 py-2 rounded-full hover:bg-brand-red hover:text-white transition text-sm">
+                ดูเมนูทั้งหมด <span>→</span>
+            </a>
+        </div>
     </section>
 
-    <!-- TODO: Why Choose Us -->
-    <section class="section">
-      <div class="container">
-        <p class="todo-label">TODO: Why Choose Us</p>
-      </div>
+    <!-- Why Choose Us Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <p class="text-brand-red font-medium text-sm mb-2">Why Choose Us</p>
+            <h2 class="text-3xl font-bold text-gray-900">ทำไมต้องเลือกเรา</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <!-- Feature 1 -->
+            <div class="bg-white p-8 rounded-[32px] text-center shadow-sm">
+                <div class="w-12 h-12 mx-auto bg-pink-50 rounded-full flex items-center justify-center text-brand-red mb-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">วัตถุดิบพรีเมียม</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">คัดสรรวัตถุดิบคุณภาพสูง<br>จากทั่วโลก เนย ครีม<br>และช็อกโกแลตแท้</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white p-8 rounded-[32px] text-center shadow-sm">
+                <div class="w-12 h-12 mx-auto bg-pink-50 rounded-full flex items-center justify-center text-brand-red mb-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">สดใหม่ทุกวัน</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">อบสดใหม่ทุกเช้า<br>ไม่ใช้สารกันบูด<br>รับรองความอร่อยในทุกคำ</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white p-8 rounded-[32px] text-center shadow-sm">
+                <div class="w-12 h-12 mx-auto bg-pink-50 rounded-full flex items-center justify-center text-brand-red mb-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">เชฟผู้เชี่ยวชาญ</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">เชฟขนมระดับมืออาชีพ<br>ผ่านการฝึกฝนจากฝรั่งเศส<br>และญี่ปุ่น</p>
+            </div>
+        </div>
     </section>
 
-    <!-- TODO: CTA -->
-    <section class="section">
-      <div class="container">
-        <p class="todo-label">TODO: Call to Action</p>
-      </div>
+   <!-- CTA Section -->
+    <section class="container mx-auto px-6 py-20 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">พร้อมสั่งเค้กแล้วหรือยัง?</h2>
+        <p class="text-gray-500 mb-8">สั่งเค้กล่วงหน้าอย่างน้อย 2 วัน เพื่อรับรสชาติที่ดีที่สุด ปรึกษาเราได้ตลอดเวลา</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#" class="bg-brand-red text-white px-8 py-3 rounded-full font-medium hover:bg-rose-700 transition">สั่งเค้กเลย</a>
+            <a href="#" class="border border-brand-red text-brand-red px-8 py-3 rounded-full font-medium hover:bg-brand-red hover:text-white transition">ดูเมนูก่อน</a>
+        </div>
     </section>
-  </main>
 
   <!-- Shared Footer -->
   <footer class="site-footer">

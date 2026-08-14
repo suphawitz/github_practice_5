@@ -29,18 +29,24 @@
 </head>
 <body class="bg-brand-bg text-gray-800 flex flex-col min-h-screen justify-between">
 
-  <!-- Header / Navigation -->
-  <header class="bg-white border-b border-gray-100 sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a class="flex items-center gap-2 text-2xl font-bold text-brand-dark" href="index.html">
-        <span class="p-2 bg-brand-pink/10 rounded-xl">🎂</span>
-        Layer & Less
+  <!-- Header & Navigation Bar (ปรับตามรูปภาพ) -->
+  <header class="bg-white border-b border-amber-100/60 py-4 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+      <a class="text-2xl font-bold text-brand-dark tracking-tight hover:opacity-90 transition" href="index.html">
+        Layer &amp; Less
       </a>
-
-<nav class="nav-links" aria-label="Main navigation">
-        <a class="active" href="index.html">หน้าแรก</a>
-        <a href="menu.html">เมนูเค้ก</a>
-        <a href="contact.html">ติดต่อเรา</a>
+      <nav class="flex items-center gap-2 md:gap-3" aria-label="Main navigation">
+        <!-- ปุ่ม Active (หน้าแรก - สีชมพู) -->
+        <a class="bg-[#c83b54] text-white font-medium px-5 py-1.5 rounded-full text-sm shadow-sm hover:bg-[#b03047] transition" href="index.html">
+          หน้าแรก
+        </a>
+        <!-- ปุ่มทั่วไป (สีน้ำตาลทอง) -->
+        <a class="bg-[#b6a073] text-white font-medium px-5 py-1.5 rounded-full text-sm shadow-sm hover:bg-[#a38e63] transition" href="menu.html">
+          เมนูเค้ก
+        </a>
+        <a class="bg-[#b6a073] text-white font-medium px-5 py-1.5 rounded-full text-sm shadow-sm hover:bg-[#a38e63] transition" href="contact.html">
+          ติดต่อเรา
+        </a>
       </nav>
     </div>
   </header>
@@ -154,14 +160,14 @@
   <!-- Footer -->
   <footer class="bg-brand-dark text-gray-300 py-8">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 border-b border-gray-700 pb-6">
-      <strong class="text-white text-lg">Layer & Less</strong>
-     <nav class="footer-links" aria-label="Footer navigation">
-        <a href="index.html">หน้าแรก</a>
-        <a href="menu.html">เมนู</a>
-        <a href="contact.html">ติดต่อ</a>
+      <strong class="text-white text-lg">Layer &amp; Less</strong>
+      <nav class="flex items-center gap-6 text-sm" aria-label="Footer navigation">
+        <a href="index.html" class="hover:text-white transition">หน้าแรก</a>
+        <a href="menu.html" class="hover:text-white transition">เมนู</a>
+        <a href="contact.html" class="hover:text-white transition">ติดต่อ</a>
       </nav>
     </div>
-    <div class="max-w-6xl mx-auto px-4 text-center text-xs text-gray-500 mt-6">© 2026 Layer & Less — All rights reserved.</div>
+    <div class="max-w-6xl mx-auto px-4 text-center text-xs text-gray-500 mt-6">© 2026 Layer &amp; Less — All rights reserved.</div>
   </footer>
 
 </body>

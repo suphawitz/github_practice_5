@@ -5,6 +5,19 @@ Workshop นี้เป็น Workshop สุดท้ายของคอร�
 
 ให้สมาชิกทุกคนในทีมร่วมกันพัฒนาเว็บไซต์ **Layer & Less จำนวน 3 หน้า** ตาม Design Reference ที่กำหนด โดยทีมต้องวางแผน แบ่งงาน พัฒนา Review และ Merge งานร่วมกันเอง
 
+
+---
+
+# Team Members
+- Kanthida Aijai กานต์ธิดา อ้ายใจ 
+- Suphawit Jaikaewma ศุภวิชญ์ ใจแก้วมา
+- Ittiwut Jantamelee อิทฐิวธ จันทมาลี
+- Narawit Kantasa นราวิชญ์ ขันทะสา 
+- Supakit Khamka ศุภกิตติ์ คำก๋า
+- Thotrakoon Duangan ต่อตระกูล ดวงสาร
+- Supitcha Kanwana พิชญ์ชา กันวะนา
+
+
 ---
 
 ## Design Reference

@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Layer & Less | Contact</title>
+
+  <link rel="stylesheet" href="styles.css">
   <!-- โหลด Tailwind CSS ผ่าน CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -30,23 +32,15 @@
 <body class="bg-brand-bg text-gray-800 flex flex-col min-h-screen justify-between">
 
   <!-- Header & Navigation Bar (ปรับตามรูปภาพ) -->
-  <header class="bg-white border-b border-amber-100/60 py-4 shadow-sm">
-    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
-      <a class="text-2xl font-bold text-brand-dark tracking-tight hover:opacity-90 transition" href="index.html">
-        Layer &amp; Less
-      </a>
-      <nav class="flex items-center gap-2 md:gap-3" aria-label="Main navigation">
-        <!-- ปุ่ม Active (หน้าแรก - สีชมพู) -->
-        <a class="bg-[#c83b54] text-white font-medium px-5 py-1.5 rounded-full text-sm shadow-sm hover:bg-[#b03047] transition" href="index.html">
-          หน้าแรก
-        </a>
-        <!-- ปุ่มทั่วไป (สีน้ำตาลทอง) -->
-        <a class="bg-[#b6a073] text-white font-medium px-5 py-1.5 rounded-full text-sm shadow-sm hover:bg-[#a38e63] transition" href="menu.html">
-          เมนูเค้ก
-        </a>
-        <a class="bg-[#b6a073] text-white font-medium px-5 py-1.5 rounded-full text-sm shadow-sm hover:bg-[#a38e63] transition" href="contact.html">
-          ติดต่อเรา
-        </a>
+  <!-- Shared Header / Navigation -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Layer & Less</a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">หน้าแรก</a>
+        <a href="menu.html">เมนูเค้ก</a>
+        <a class="active" href="contact.html">ติดต่อเรา</a>
       </nav>
     </div>
   </header>
